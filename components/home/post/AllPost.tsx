@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BsEmojiSmile } from "react-icons/bs";
-import { FiSend } from "react-icons/fi";
+import { FiHeart, FiSend } from "react-icons/fi";
+import { FaHeart } from 'react-icons/fa';
 
 
 function AllPost({ post }) {
@@ -31,10 +32,19 @@ function AllPost({ post }) {
               <span className='ml-2 text-sm text-white opacity-70'>Posted by {''}
                 <br />
                 <strong>
-                  <Link href={`/${post.id}`}>{post.name}</Link>
+                  <Link href={`/${post.id}`}>{post?.name}</Link>
                 </strong>
               </span>
             </div>
+          </div>
+
+          <div className='mb-3 flex justify-start items-center gap-2 opacity-70'>
+            <FiHeart  className='text-[20px] opacity-70'/>
+            <p>Liked by {''}
+              <strong>You</strong> {''}
+              and {''}
+              <Link href={`/${post.id}`}><strong>{post?.name}</strong></Link>
+            </p>
           </div>
 
         <div className='w-full h-[40px] flex flex-row items-center gap-2'>

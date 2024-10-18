@@ -4,7 +4,7 @@
 // import { TbMessage } from "react-icons/tb";
 // import { TbBell } from "react-icons/tb";
 // import { TbUser } from "react-icons/tb";
-// import { TbSettings } from "react-icons/tb";
+import { TbSettings } from "react-icons/tb";
 
 
 const sideItems = [
@@ -12,7 +12,7 @@ const sideItems = [
         id: 1,
         title: 'Home',
         icon: '/home.svg',
-        link: '/home'
+        link: '/home',
     },
     {
         id: 2,
